@@ -24,13 +24,12 @@ A Flask web application to verify the similarity between two signature images us
    pip install -r requirements.txt
 #Run the app
 python app.py
-#Project Structure
-signature_attestation_project/
-│
-├── app.py # Main Flask application
-├── requirements.txt # Required Python packages
-├── README.md # Project overview and instructions
-└── templates/ # HTML templates for rendering views
-├── upload.html
-└── result.html
-
+## Project Structure
+├── app.py                # Main backend logic
+├── templates/
+│   ├── upload.html       # Upload form UI
+│   └── result.html       # Analysis result UI
+├── static/               # Stores output images
+├── uploads/              # Stores uploaded files
+├── requirements.txt
+└── README.md
