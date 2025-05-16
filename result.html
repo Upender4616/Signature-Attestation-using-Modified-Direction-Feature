@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Signature Analysis Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f3f6;
+  text-align: center;
+  padding: 70px 0;
+  background-image: url(https://membership.amavic.com.au/files/PSUB.jpg);
+  background-size: cover; /* Zooms the background image to cover the entire element */
+  background-position: left;
+}
+    h2
+    {
+        color:purple;
+    }
+    .split
+    {
+        height:50%;
+        width:50%;
+        position:fixed;
+
+    }
+    .left{
+        right:0;
+    }
+    .right{
+        left:0;
+    }
+    .centered{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align:center;
+    }
+    .centered img{
+        width:150px;
+        border-radius:50%;
+    }
+    .analysis-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 200px; /* Add some padding to the top of the analysis container */
+    }
+    
+    .analysis-left, .analysis-right {
+        width: 45%;
+        margin-top: 0.05px; /* adjust the top value to position the analysis sections below the heading */
+    }
+    
+    .analysis-left {
+        margin-left: 50px;
+    }
+    
+    .analysis-right {
+        margin-right: 50px;
+    }
+    .container {
+        margin-top: 20px; /* Add some margin to the top of the container */
+    }
+</style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Signature Analysis Result</h2>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h3 class="card-title">Similarity Score: {{ score }}</h3>
+<p class="card-text">Result: {{ match_result }}</p>
+                <div class="text-center">
+                    <img src="{{ url_for('static', filename='result.png') }}" alt="Match Result" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Add a gap -->
+        <div style="height: 50px;"></div>
+    
+        <!-- Make the analysis sections fixed -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Signature 1 Analysis:</h3>
+                        <p class="card-text">Estimated Velocity: {{ velocity1 }}</p>
+                        <p class="card-text">Estimated Pressure: {{ pressure1 }}</p>
+                        <div class="text-center">
+                            <img src="{{ url_for('static', filename='stroke1.png') }}" alt="Strokes 1" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Signature 2 Analysis:</h3>
+                        <p class="card-text">Estimated Velocity: {{ velocity2 }}</p>
+                        <p class="card-text">Estimated Pressure: {{ pressure2 }}</p>
+                        <div class="text-center">
+                            <img src="{{ url_for('static', filename='stroke2.png') }}" alt="Strokes 2" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

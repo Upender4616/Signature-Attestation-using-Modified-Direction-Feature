@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Upload Signatures</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f3f6;
+  text-align: center;
+
+}
+    header{
+  background-color: #2874f0;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+    nav {
+  text-align: center;
+  flex: 1;
+  text-align: center;
+}
+
+   .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+    nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    nav ul li {
+  margin-left: 20px;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 700;
+  align-items: center;
+  text-align: center;
+}
+    footer {
+  background-color: #2874f0;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  clear: both;
+}
+main {
+  padding: 70px 0;
+  background-image: url(https://membership.amavic.com.au/files/PSUB.jpg);
+  background-size: cover; /* Zooms the background image to cover the entire element */
+  background-position: left;
+  
+  
+}
+
+main h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fcfafa;
+}
+
+form {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 400px; /* Decreased width */
+  width: 100%;
+  margin: 0 auto;
+  backdrop-filter: blur(3px);
+  
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #333;
+}
+
+form input[type="file"] {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #2874f0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #1a5bb8;
+}
+.form {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+</style>
+</head>
+<body>
+  <header>
+      <h1>Signature Attestation System</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+  <marquee>
+    <h3>Signature Attestation Using Modified Direction Feature</h3>
+</marquee>
+<main>
+  <h2>Upload Signatures for Verification</h2>
+  {% if error %}
+<div class="alert alert-danger mt-3">{{ error }}</div>
+{% endif %}
+<div class = "form">
+  <form method="POST" action = "/" enctype="multipart/form-data">
+    <label for="file1">Signature 1:</label>
+    <input type="file" name="file1" class="form-control-file" required><br><br>
+    <label for="file2">Signature 2:</label>
+    <input type="file" name="file2" class="form-control-file" required><br><br>
+    <button type="submit">Verify</button>
+  </form>
+</div>
+</main>
+    <footer>
+      <p>&copy; 2024 Signature Attestation System</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
