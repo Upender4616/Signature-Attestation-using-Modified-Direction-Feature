@@ -25,14 +25,16 @@ A Flask web application to verify the similarity between two signature images us
 #Run the app
 python app.py
 ## Project Structure
-├── app.py                # Main backend logic
+Signature Attestation
 
-├── templates/
+   ├── app.py                # Main backend logic
 
-│   ├── upload.html       # Upload form UI
+   ├── templates/
 
-│   └── result.html       # Analysis result UI
+      ├── upload.html       # Upload form UI
 
-├── requirements.txt
+      └── result.html       # Analysis result UI
 
-└── README.md
+   ├── requirements.txt
+
+   └── README.md
