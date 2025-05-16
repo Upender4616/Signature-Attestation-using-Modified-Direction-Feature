@@ -30,6 +30,7 @@ Signature Attestation
    ├── app.py                # Main backend logic
 
    ├── templates/
+      
       ├── upload.html       # Upload form UI
 
       └── result.html       # Analysis result UI
