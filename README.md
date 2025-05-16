@@ -31,9 +31,9 @@ Signature Attestation
 
    ├── templates/
       
-      ├── upload.html       # Upload form UI
+      ├── upload.html# Upload form UI
 
-      └── result.html       # Analysis result UI
+      └── result.html# Analysis result UI
 
    ├── requirements.txt
 
