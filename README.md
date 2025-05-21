@@ -29,7 +29,7 @@ Signature Attestation
 
    ├── app.py                # Main backend logic
 
-   ├── templates
+   ├── templates/
       
       ├── upload.html# Upload form UI
 
